@@ -1,24 +1,21 @@
-* 
-{
+* {
     font-family: 'Roboto', 'Arial', 'Helvetica', sans-serif;
     color: #263238;
     margin: 0;
     padding: 0;
 }   
 
-body 
-{
+body{
     box-sizing: border-box;
 }
 
-p 
-{
+p{
     padding: 3px 0;
     text-align: justify;
 }
 
 
-.container {
+.container{
     display: grid;
     grid-template-columns: 4fr 8fr;
     grid-template-areas: 
@@ -28,8 +25,7 @@ p
 }
 
  
-.picture 
-{
+.picture{
     grid-area: picture;
     display: flex;
     justify-content: center;
@@ -42,7 +38,6 @@ p
     border: 10px solid #4F8487;
     border-radius: 50%;
 }
-
     
 .header { 
     background-color: #ffffff;
@@ -50,45 +45,39 @@ p
     grid-area: header;  
 }
 
-h1 
-{
+h1{
     text-align: left;
-    margin-top: 2px;
+    margin-top: 100px;
     font-family: sans-serif;
     font-size: 40px;
 }
 
-
-h2 
-{
+h2{
     color: #212121;
     
 }
 
 
-#s-line {
+#s-line{
     width: 80px;
     border-top: 3px solid #59B8BD;
 }
 
-#firstname 
-{    
+#firstname{    
     color: #212121;    
 }
 
-#lastname 
-{
+#lastname{
     font-weight: 300;
     color: #59B8BD;    
 }
 
-h2 
-{
+h2{
     font-size: 1.85rem;
     color: #212121;
 }
 
-aside {
+aside{
     grid-area: aside;
     display: flex;
     flex-direction: column;
@@ -96,32 +85,31 @@ aside {
     background-color: #59B8BD;
 }
 
-aside h3 {
+aside h3{
     font-size: 1.75rem;
     text-transform: uppercase;
     text-align: center;
     padding: 5px 0;
     color: #59B8BD;
-    background-color: #263238;   
- 
+    background-color: #263238;  
 }
 
 #contact-details {
     padding: 25px 50px;
 }
 
-#about-me-details {
+#about-me-details{
     padding: 25px 50px;
     text-align: justify;
 }
 
 
-#hobbies-details {
+#hobbies-details{
     text-align: center;
     margin: 40px 0;
 }
 
-#hobbies-details i {
+#hobbies-details i{
     font-size: 2rem;
     height: 48px;
     width: 64px;
@@ -131,66 +119,52 @@ aside h3 {
     margin: 0 5px;
 }
 
-#hobbies {
+#hobbies{
     margin-top: auto; /* Align bottom */
 }
 
-main 
-{
+main{
     grid-area: main;
     margin-right: 65px;
 }
 
-main h3 {
+main h3{ 
     font-size: 1.75rem;
     text-transform: uppercase;
 }
 
-
-
 .city{
     display: inline-block;
-    }
+}
 
-main i {
+main i{
     color: #59B8BD;
     margin-right: 20px;        
     font-size: 2rem; 
 }
 
  
-}
-
 .left{
     display: flex;     
 }
 
-.l-line 
-{
+.l-line{
     border-top: 3px solid #59B8BD;
     margin-bottom: 40px;
 }
 
-
-
-
-.work
-{
+.work{
     display: grid;
     grid-template-columns: 5fr 7fr;
 }
 
 
-.form
-{
+.form{
     display: grid;
     grid-template-columns: 5fr 7fr;
 }  
 
-  
-
-.work, .form
-{
+.work, .form{
     display: grid;
     grid-template-columns: 5fr 7fr;
     grid-template-areas: 
@@ -199,8 +173,7 @@ main i {
     margin: 30px 0;
 }
 
-.recommandation-detail
-{
+.recommandation-detail{
     display: grid;
     grid-template-columns: 6fr 6fr;
     grid-template-areas: 
@@ -210,20 +183,14 @@ main i {
     margin-left: 50px;
 }
 
-
-
-.left
-{
+.left{
     grid-area: left;
     font-weight: bold;
 }
 
-.right
-{
+.right{
     grid-area: right;
 }
-
-
 
 
 
@@ -240,7 +207,8 @@ main i {
 */
 
 @media screen and (max-width: 1199px) 
-{    .work, .form
+{    
+    .work, .form
     {
         display: grid;
         grid-template-columns: 5fr 7fr;
@@ -314,7 +282,8 @@ main i {
         font-size: 70%;        
     }
     
-    #contact-details {
+    #contact-details 
+    {
     padding: 20px 20px;
     }
     
@@ -333,8 +302,7 @@ main i {
     h3
     {
         margin-top: 10px;
-    }
-    
+    }    
     
     main 
     {
@@ -342,21 +310,14 @@ main i {
     }
     
     
-    }
-    
-    .div1{
+    .div1
+    {
         margin-bottom: 10px;
     }
     
     .recommandation-detail
     {
         margin-left: 10px;
-    }
-    
-    
-    
-    
-    
-    
+    }    
 }
 

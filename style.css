@@ -14,6 +14,7 @@ body
 p 
 {
     padding: 3px 0;
+    text-align: justify;
 }
 
 
@@ -38,7 +39,7 @@ p
 #circleimage {
     height: 210px;
     margin: 65px 0 45px 0;
-    border: 5px solid #59B8BD;
+    border: 10px solid #4F8487;
     border-radius: 50%;
 }
 
@@ -167,7 +168,7 @@ main i {
 .l-line 
 {
     border-top: 3px solid #59B8BD;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 
@@ -205,6 +206,8 @@ main i {
     grid-template-areas: 
         "div1 div2";
     grid-column-gap: 30px;
+    margin-bottom: 20px;
+    margin-left: 50px;
 }
 
 
@@ -308,9 +311,19 @@ main i {
     #firstname, #lastname
     {
         color: #212121;
-        font-size: 70%;
-        
+        font-size: 70%;        
     }
+    
+    #contact-details {
+    padding: 20px 20px;
+    }
+    
+    #about-me-details 
+    {
+    padding: 20px 20px;
+    text-align: justify;
+    }
+    
     h2 
     {
         color: #212121;
@@ -327,6 +340,22 @@ main i {
     {
         margin-left: 10px;
     }
+    
+    
+    }
+    
+    .div1{
+        margin-bottom: 10px;
+    }
+    
+    .recommandation-detail
+    {
+        margin-left: 10px;
+    }
+    
+    
+    
+    
     
     
 }

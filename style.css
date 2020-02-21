@@ -53,8 +53,7 @@ h1{
 }
 
 h2{
-    color: #212121;
-    
+    color: #212121;    
 }
 
 
@@ -116,7 +115,7 @@ aside h3{
     padding-top: 16px;
     border: 2px solid #212121;
     border-radius: 50%;
-    margin: 0 5px;
+    margin: 0 10px;
 }
 
 #hobbies{
@@ -179,7 +178,7 @@ main i{
     grid-template-areas: 
         "div1 div2";
     grid-column-gap: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 80px;
     margin-left: 50px;
 }
 

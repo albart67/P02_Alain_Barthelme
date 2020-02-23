@@ -125,6 +125,7 @@ aside h3{
 main{
     grid-area: main;
     margin-right: 65px;
+    margin-bottom: 80px;
 }
 
 main h3{ 

@@ -24,7 +24,9 @@ p{
     grid-column-gap: 50px;
 }
 
- 
+
+/* top left picture area */ 
+
 .picture{
     grid-area: picture;
     display: flex;
@@ -38,7 +40,10 @@ p{
     border: 10px solid #4F8487;
     border-radius: 50%;
 }
-    
+   
+
+/* top right name area */ 
+
 .header { 
     background-color: #ffffff;
     text-align: left;
@@ -50,12 +55,7 @@ h1{
     margin-top: 100px;
     font-family: sans-serif;
     font-size: 55px;
-}
-
-h2{
-    color: #212121;    
-}
-
+} 
 
 #s-line{
     width: 80px;
@@ -77,6 +77,9 @@ h2{
     color: #212121;
 }
 
+
+/* bottom left about-me area and hobbies */ 
+
 aside{
     grid-area: aside;
     display: flex;
@@ -96,6 +99,7 @@ aside h3{
     padding: 5px 0;
     color: #59B8BD;
     background-color: #263238;  
+    margin-bottom: 10px;
 }
 
 #contact-details {
@@ -127,6 +131,9 @@ aside h3{
     margin-top: auto; /* Align bottom */
 }
 
+
+/*bottom right main area with experience formation and recommandation */ 
+
 main{
     grid-area: main;
     margin-right: 60px;
@@ -149,8 +156,26 @@ main{
     margin-left: 10px;
 }
 
+.left{
+    grid-area: left;
+    font-weight: bold;
+    display: flex;
+}
+
+.right{
+    grid-area: right;
+}
+
 main h3{ 
+    display: flex;
     font-size: 1.75rem;
+    text-transform: uppercase;
+    align-items: center;
+}
+
+main h4, main h5{
+    font-size: 1rem;
+    display: flex;
     text-transform: uppercase;
 }
 
@@ -158,32 +183,28 @@ main h3{
     display: inline-block;
 }
 
-main i{
+main h3 i{
+    display: inline-block;
+    color: #59B8BD;
+    margin: auto 20px auto 0px;        
+    font-size: 2rem; 
+}
+
+main .left i{
+    display: inline-block;
     color: #59B8BD;
     margin-right: 20px;        
     font-size: 2rem; 
 }
 
  
-.left{
-    display: flex;     
-}
 
 .l-line{
     border-top: 3px solid #59B8BD;
     margin-bottom: 40px;
 }
 
-.work{
-    display: grid;
-    grid-template-columns: 5fr 7fr;
-}
 
-
-.form{
-    display: grid;
-    grid-template-columns: 5fr 7fr;
-}  
 
 .work, .form{
     display: grid;
@@ -198,20 +219,13 @@ main i{
     display: grid;
     grid-template-columns: 6fr 6fr;
     grid-template-areas: 
-        "div1 div2";
+        "reco2 reco2";
     grid-column-gap: 30px;
     margin-bottom: 60px;
     margin-left: 50px;
 }
 
-.left{
-    grid-area: left;
-    font-weight: bold;
-}
 
-.right{
-    grid-area: right;
-}
 
 
 
@@ -275,107 +289,6 @@ main i{
     }
 
 
-@media screen and (max-width: 768px) 
-{
-    .container 
-    {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    
-    }
-    header 
-    {
-        background-color: #59B8BD;
-        text-align: center;
-    }
-    h1 
-    {
-        margin-top: 10px;
-        text-align: center;
-    }
-    
-    #firstname
-    {
-        color: white;
-        font-size: 65%; 
-    }
-    
-    #lastname{
-        color: #212121;
-        font-size: 65%       
-    }
-        
-    }
-    
-    #contact-details 
-    {
-    padding: 20px 20px;
-    }
-    
-    #about-me-details 
-    {
-    padding: 20px 20px;
-    text-align: justify;
-    }
-    
-    h2 
-    {
-        color: #212121;
-        margin-bottom: 20px;
-    }
-    
-    h3
-    {
-        margin-top: 10px;
-    }  
-    
-    main{
-        margin-right: 20px;
-    }
-    
-    main h3{
-        font-size: 1.5;
-    }
-    
-    main 
-    {
-        margin-left: 10px;
-    }
-    
-    main .fas{
-        margin-right: 10px;
-    }
-    
-    .form .far{
-        margin-right: 10px;
-    }
-    
-    .work .far{
-        margin-right: 10px;
-    }
-    
-    .form .fas {
-        margin-right: 10px;
-    }
-    
-    .work .fas {
-        margin-right: 10px;
-    }
-    
-    
-        
-    .div1
-    {
-        margin-bottom: 10px;
-    }
-    
-    .recommandation-detail
-    {
-        margin-left: 10px;
-    }    
-}
 
 
 @media screen and (max-width: 768px) 
@@ -387,7 +300,6 @@ main i{
     }
     
     
-    }
     header 
     {
         background-color: #59B8BD;
@@ -395,17 +307,15 @@ main i{
     }
 
     #circleimage {
-        margin: 0 10px;
+        margin: 5px 10px;
     }
 
-    h1 
-    {
+    h1{
         margin-top: 10px;
         text-align: center;
     }
     
-    #firstname
-    {
+    #firstname{
         color: white;
         font-size: 65%; 
     }
@@ -415,30 +325,36 @@ main i{
         font-size: 65%       
     }
         
+        
+    #contact-details{
+        padding: 20px 20px;
     }
     
-    #contact-details 
-    {
-    padding: 20px 20px;
+    #about-me-details{
+        padding: 20px 20px;
+        text-align: justify;
     }
     
-    #about-me-details 
-    {
-    padding: 20px 20px;
-    text-align: justify;
-    }
-    
-    h2 
-    {
+    h2{
         color: #212121;
         margin-bottom: 20px;
     }
     
-    h3
-    {
+    h3{
         margin-top: 10px;
-    }  
+    } 
     
+    h4{
+        display: inline-block;
+        margin-left: 36px;
+    }
+    
+    h5{
+        display: inline-block;
+        text-transform: uppercase;
+        margin-left: 41px;
+    }
+      
     main{
         margin-left: 20px;
         margin-right: 20px;
@@ -449,8 +365,7 @@ main i{
         font-size: 1.3rem;
     }
     
-    main 
-    {
+    main{
         margin-left: 10px;
     }
     
@@ -466,22 +381,20 @@ main i{
         margin-right: 10px;
     }
     
-    .form .fas {
+    .form .fas{
         margin-right: 10px;
     }
     
-    .work .fas {
+    .work .fas{
         margin-right: 10px;
     }   
     
         
-    .div1
-    {
-        margin-bottom: 10px;
+    .reco1{
+        margin-bottom: 15px;
     }
     
-    .recommandation-detail
-    {
+    .recommandation-detail{
         margin-left: 10px;
     }    
 }

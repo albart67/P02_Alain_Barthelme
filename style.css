@@ -9,12 +9,14 @@ body{
     box-sizing: border-box;
 }
 
-p{
-    padding: 3px 0;
-    text-align: justify;
-}
 
+/*page organisation with grid
+ 
+  picture |  header | 
+-------------------
+  aside   |  main   | 
 
+*/
 .container{
     display: grid;
     grid-template-columns: 4fr 8fr;
@@ -24,9 +26,13 @@ p{
     grid-column-gap: 50px;
 }
 
+p{
+    padding: 3px 0;
+    text-align: justify;
+}
 
-/* top left picture area */ 
 
+/* top left "picture" area */ 
 .picture{
     grid-area: picture;
     display: flex;
@@ -42,7 +48,7 @@ p{
 }
    
 
-/* top right name area */ 
+/* top right "header" name and function area */ 
 
 .header { 
     background-color: #ffffff;
@@ -57,6 +63,12 @@ h1{
     font-size: 55px;
 } 
 
+h2{
+    font-size: 1.85rem;
+    color: #212121;
+}
+
+/*small line under function*/
 #s-line{
     width: 80px;
     border-top: 3px solid #59B8BD;
@@ -67,19 +79,12 @@ h1{
 }
 
 #lastname{
-    font-weight: 300;
-     
-    color: #212121;
-}
-
-h2{
-    font-size: 1.85rem;
+    font-weight: 300;     
     color: #212121;
 }
 
 
-/* bottom left about-me area and hobbies */ 
-
+/* bottom left area about-me and hobbies */ 
 aside{
     grid-area: aside;
     display: flex;
@@ -111,12 +116,12 @@ aside h3{
     text-align: justify;
 }
 
-
 #hobbies-details{
     text-align: center;
     margin: 40px 0;
 }
 
+/*Hobbies icons*/
 #hobbies-details i{
     font-size: 2rem;
     height: 48px;
@@ -132,26 +137,56 @@ aside h3{
 }
 
 
-/*bottom right main area with experience formation and recommandation */ 
-
+/*bottom-right "main" area with experience, formation and recommandation */ 
 main{
     grid-area: main;
     margin-right: 60px;
     margin-bottom: 80px;
 }
 
-.form .fas{
-    font-size: 1rem;
+main h3{ 
     display: flex;
-    align-content: center;
-    margin-right: 25px;
-    margin-left: 10px;
+    font-size: 1.75rem;
+    text-transform: uppercase;
+    align-items: center;
 }
 
-.work .fas{
+main h3 i{
+    display: inline-block;
+    color: #59B8BD;
+    margin: auto 20px auto 0px;        
+    font-size: 2rem; 
+}
+
+
+/*title long under line */
+.l-line{
+    border-top: 3px solid #59B8BD;
+    margin-bottom: 40px;
+}
+
+/*name of company and formation institut*/
+main h4{
     font-size: 1rem;
     display: flex;
-    align-content: center;
+    text-transform: uppercase;
+}
+
+/*grid with date-location "left" and details of experience or formation "right"*/
+.work, .form{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: 
+        "left  right";
+    grid-column-gap: 30px;
+    margin: 30px 0;
+}
+
+/*icons of different experiences and formation*/
+.form .fas, .work .fas{
+    font-size: 1rem;
+    display: flex;
+    align-content: center;    
     margin-right: 25px;
     margin-left: 10px;
 }
@@ -162,34 +197,7 @@ main{
     display: flex;
 }
 
-.right{
-    grid-area: right;
-}
-
-main h3{ 
-    display: flex;
-    font-size: 1.75rem;
-    text-transform: uppercase;
-    align-items: center;
-}
-
-main h4, main h5{
-    font-size: 1rem;
-    display: flex;
-    text-transform: uppercase;
-}
-
-.city{
-    display: inline-block;
-}
-
-main h3 i{
-    display: inline-block;
-    color: #59B8BD;
-    margin: auto 20px auto 0px;        
-    font-size: 2rem; 
-}
-
+/*incon and city(with date) are flex to stay same line*/
 main .left i{
     display: inline-block;
     color: #59B8BD;
@@ -197,36 +205,24 @@ main .left i{
     font-size: 2rem; 
 }
 
- 
-
-.l-line{
-    border-top: 3px solid #59B8BD;
-    margin-bottom: 40px;
+.city{
+    display: inline-block;
 }
 
 
-
-.work, .form{
-    display: grid;
-    grid-template-columns: 5fr 7fr;
-    grid-template-areas: 
-        "left  right";
-    grid-column-gap: 30px;
-    margin: 30px 0;
+.right{
+    grid-area: right;
 }
 
+/*grid with first recommandation "reco1" on the left ans second recommandation "reco2" on the right*/
 .recommandation-detail{
     display: grid;
     grid-template-columns: 6fr 6fr;
     grid-template-areas: 
-        "reco2 reco2";
-    grid-column-gap: 30px;
+        "reco1 reco2";
+    grid-column-gap: 50px;
     margin-bottom: 60px;
-    margin-left: 50px;
 }
-
-
-
 
 
 /* 
@@ -243,163 +239,152 @@ main .left i{
 
 @media screen and (max-width: 1199px) 
 {    
-    .work, .form
-    {
+    #contact-details, #about-me-details{
+        padding-left:  25px;
+        padding-right: 25px;
+    }    
+    
+    main{
+        margin-bottom: 10px;
+        margin-right: 20px;
+    }
+    
+    .work, .form{
         display: grid;
         grid-template-columns: 5fr 7fr;
         grid-template-areas:
             "left right";
-    }
-}
-
-
-@media screen and (max-width: 991px) 
-{
-    .container 
-    {
-        display: grid;
-        grid-template-columns: 5fr 7fr;
-        grid-template-areas: 
-            "picture header"
-            "aside main";
         grid-column-gap: 10px;
-    }
-        
-    
-    .work, .form
-    {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .left, .right
-    {
-        margin-left : 10px;
-    }
-    
-    .recommandation-detail
-    {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .div1, .div2
-    {
-        margin-left: 10px;
-    }
-
-
-
-
-@media screen and (max-width: 768px) 
-{
-    .container 
-    {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    
-    header 
-    {
-        background-color: #59B8BD;
-        text-align: center;
-    }
-
-    #circleimage {
-        margin: 5px 10px;
-    }
-
-    h1{
-        margin-top: 10px;
-        text-align: center;
-    }
-    
-    #firstname{
-        color: white;
-        font-size: 65%; 
-    }
-    
-    #lastname{
-        color: #212121;
-        font-size: 65%       
-    }
-        
-        
-    #contact-details{
-        padding: 20px 20px;
-    }
-    
-    #about-me-details{
-        padding: 20px 20px;
-        text-align: justify;
-    }
-    
-    h2{
-        color: #212121;
-        margin-bottom: 20px;
-    }
-    
-    h3{
-        margin-top: 10px;
-    } 
-    
-    h4{
-        display: inline-block;
-        margin-left: 36px;
-    }
-    
-    h5{
-        display: inline-block;
-        text-transform: uppercase;
-        margin-left: 41px;
-    }
-      
-    main{
-        margin-left: 20px;
-        margin-right: 20px;
-        margin-bottom: 10px;
-    }
-    
-    main h3{
-        font-size: 1.3rem;
-    }
-    
-    main{
-        margin-left: 10px;
-    }
-    
-    main .fas{
-        margin-right: 10px;
-    }
-    
-    .form .far{
-        margin-right: 10px;
-    }
-    
-    .work .far{
-        margin-right: 10px;
-    }
-    
-    .form .fas{
-        margin-right: 10px;
-    }
-    
-    .work .fas{
-        margin-right: 10px;
-    }   
-    
-        
-    .reco1{
-        margin-bottom: 15px;
     }
     
     .recommandation-detail{
-        margin-left: 10px;
-    }    
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .reco1{
+        margin-bottom: 15px;
+    }
+        
+    @media screen and (max-width: 991px){
+        .container {
+            display: grid;
+            grid-template-columns: 5fr 7fr;
+            grid-template-areas: 
+            "picture header"
+            "aside main";
+            grid-column-gap: 10px;
+        }        
+                
+        .work, .form{
+            display: flex;
+            flex-direction: column;
+        }
+    
+        .left, .right{
+            margin-left : 10px;
+        }
+        
+        main .left{
+            align-items: center;
+        }
+    
+        .fas fa-circle{
+             margin-right: 15px;
+        }
+    
+        .far fa-dot-circle{
+            margin-right: 10px;
+        }
+    
+        main .fas{
+             margin-right: 10px;
+        }
+        
+        h4{
+            display: inline-block;
+            margin-left: 51px;
+        }
+    
+        h5{
+            display: inline-block;            
+            margin-left: 51px;
+        }            
+    
+        .recommandation-detail{
+            display: flex;
+            flex-direction: column;
+        }
+    
+        .reco1, .reco2{
+            margin-left: 10px;
+        }                    
+                    
+        @media screen and (max-width: 768px){
+            .container{
+                display: flex;
+                flex-direction: column;
+            }   
+    
+            header{
+                background-color: #59B8BD;
+                text-align: center;
+            }
+
+            #circleimage{
+                margin: 5px 10px;
+            }
+
+            h1{
+                margin-top: 10px;
+                text-align: center;
+            }
+    
+            #firstname{
+                color: white;
+                font-size: 65%; 
+            }
+    
+            #lastname{
+                color: #212121;
+                font-size: 65%       
+            }        
+        
+            #contact-details, #about-me-details{
+                padding: 20px 20px;
+            }           
+                          
+             
+            #hobbies-details{
+                margin: 20px 0px;
+            }
+            
+            h2{
+                color: #212121;
+                margin-bottom: 20px;
+            }
+    
+            h3{
+                margin-top: 10px;
+            }            
+      
+            main{
+                margin-left: 10px;
+                margin-right: 20px;
+                margin-bottom: 10px;
+            }
+    
+            main h3{
+                font-size: 1.3rem;
+                margin-left: 10px;
+            }           
+            
+            .recommandation-detail{
+                margin-left: 10px;
+            }    
+        }
+    }
 }
-
-
 
 
 

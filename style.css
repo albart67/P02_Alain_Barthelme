@@ -68,7 +68,7 @@ h2{
     color: #212121;
 }
 
-/*small line under function*/
+/*small line under Web Developpeur*/
 #s-line{
     width: 80px;
     border-top: 3px solid #59B8BD;
@@ -159,7 +159,7 @@ main h3 i{
 }
 
 
-/*title long under line */
+/*title long underline */
 .l-line{
     border-top: 3px solid #59B8BD;
     margin-bottom: 40px;
@@ -172,7 +172,7 @@ main h4{
     text-transform: uppercase;
 }
 
-/*grid with date-location "left" and details of experience or formation "right"*/
+/*grid with date+location "left" and details of experience or formation "right"*/
 .work, .form{
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -182,7 +182,17 @@ main h4{
     margin: 30px 0;
 }
 
-/*icons of different experiences and formation*/
+.left{
+    grid-area: left;
+    font-weight: bold;
+    display: flex;
+}
+
+.right{
+    grid-area: right;
+}
+
+/*icon of precedent experience and formation*/
 .form .fas, .work .fas{
     font-size: 1rem;
     display: flex;
@@ -191,13 +201,8 @@ main h4{
     margin-left: 10px;
 }
 
-.left{
-    grid-area: left;
-    font-weight: bold;
-    display: flex;
-}
 
-/*incon and city(with date) are flex to stay same line*/
+/*icon of current work experience and formation*/
 main .left i{
     display: inline-block;
     color: #59B8BD;
@@ -210,11 +215,8 @@ main .left i{
 }
 
 
-.right{
-    grid-area: right;
-}
 
-/*grid with first recommandation "reco1" on the left ans second recommandation "reco2" on the right*/
+/*grid with first recommandation "reco1" on the left and second recommandation "reco2" on the right*/
 .recommandation-detail{
     display: grid;
     grid-template-columns: 6fr 6fr;
@@ -311,11 +313,7 @@ main .left i{
             margin-left: 51px;
         }            
     
-        .recommandation-detail{
-            display: flex;
-            flex-direction: column;
-        }
-    
+        
         .reco1, .reco2{
             margin-left: 10px;
         }                    

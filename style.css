@@ -70,7 +70,7 @@ h2{
 
 /*small line under Web Developpeur*/
 #s-line{
-    width: 80px;
+    width: 95px;
     border-top: 3px solid #59B8BD;
 }
 
@@ -262,6 +262,7 @@ main .left i{
     .recommandation-detail{
         display: flex;
         flex-direction: column;
+        margin-left: 51px;
     }
     
     .reco1{

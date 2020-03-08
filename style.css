@@ -12,7 +12,7 @@ body{
 
 /*page organisation with grid
  
-  picture |  header | 
+  figure |  header | 
 -------------------
   aside   |  main   | 
 
@@ -21,7 +21,7 @@ body{
     display: grid;
     grid-template-columns: 4fr 8fr;
     grid-template-areas: 
-        "picture header"
+        "figure header"
         "aside main";
     grid-column-gap: 50px;
 }
@@ -32,9 +32,9 @@ p{
 }
 
 
-/* top left "picture" area */ 
-.picture{
-    grid-area: picture;
+/* top left figure area */ 
+figure{
+    grid-area:figure;
     display: flex;
     justify-content: center;
     background-color: #59B8BD;
@@ -68,10 +68,10 @@ h2{
     color: #212121;
 }
 
+
 /*small line under Web Developpeur*/
-#s-line{
-    width: 95px;
-    border-top: 3px solid #59B8BD;
+#s-line{    
+    border-bottom: 3px solid #59B8BD;
 }
 
 #firstname{  
@@ -274,7 +274,7 @@ main .left i{
             display: grid;
             grid-template-columns: 5fr 7fr;
             grid-template-areas: 
-            "picture header"
+            "figure header"
             "aside main";
             grid-column-gap: 10px;
         }        
